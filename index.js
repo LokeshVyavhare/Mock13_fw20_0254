@@ -7,8 +7,6 @@ const cors = require('cors');
 // routes: import
 const SigninRoute = require('./src/Routes/Login')
 const SignupRoute = require('./src/Routes/Register')
-const profileRoute = require('./src/Routes/Profile')
-const calculateRoute = require('./src/Routes/Calculate')
 
 
 const app = express();
@@ -23,8 +21,7 @@ app.get('/',(req,res)=>res.send('hello world'));
 // routes;
 app.use('/login', SigninRoute);
 app.use('/register', SignupRoute);
-app.use('/getProfile', profileRoute);
-app.use('/calculate', calculateRoute);
+
 
 
 app.listen(8080,async()=> { 
