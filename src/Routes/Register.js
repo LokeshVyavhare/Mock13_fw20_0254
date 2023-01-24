@@ -16,12 +16,12 @@ App.post('/', async (req, res) => {
             return res.status(401).send({ error: true, message: "User_Exists" });
         }
         const temp=email.split('@');
-        if(temp.length>2){
+        if(temp.length!==2){
             res.status(401).send({ error: true, message: "Wrong Format Of the Email" });
             return;
         }
         let role;
-        if(temp[1]==='@masaischool.com'){
+        if(temp[1]==='masaischool.com'){
             role='admin'
         }else{
             role='user'
