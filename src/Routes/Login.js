@@ -9,6 +9,7 @@ const App = express.Router();
 
 App.post('/', async(req, res)=>{
     const { email, password } = req.body;
+
   
 	const user = await User.findOne({ email });
 	if (!user) {
