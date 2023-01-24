@@ -19,7 +19,7 @@ App.post('/', async(req, res)=>{
 
   
 	  if (res.status(201)) {
-		return res.json({token: token});
+		return res.json({token: token, role:user.role});
 	  } else {
 		return res.status(401).send({error:true, message:"error, please try again"});
 	  }

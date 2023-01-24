@@ -32,7 +32,7 @@ App.post('/', async (req, res) => {
             name,
             role
         });
-        res.send({ message: "user created successfully" });
+        res.send({ message: "user created successfully" , role});
     } catch (error) {
         res.status(401).send({ error: true, message: error.message });
 
